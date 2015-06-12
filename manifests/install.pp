@@ -16,8 +16,8 @@ class odoo::install inherits odoo {
     ensure => installed,
     } ->
   exec { 'install wkhtmltopdf':
-    command => "cd /usr/local/src/; wget http://downloads.sourceforge.net/wkhtmltopdf/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb; dpkg -i /usr/local/src/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb",
-    unless  => "dpkg -l|grep wkhtmltopdf",
+    command => "/usr/bin/wget -O /usr/local/src/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb http://downloads.sourceforge.net/wkhtmltopdf/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb; /usr/bin/dpkg -i /usr/local/src/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb",
+    unless  => "/usr/bin/dpkg -l|grep wkhtmltopdf",
   }
   exec { 'odoo_pip_requirements_install':
     command => "/usr/bin/pip install -r ${odoo::install_path}/requirements.txt",
