@@ -69,6 +69,10 @@ class odoo (
   contain 'odoo::config'
   contain 'odoo::service'
 
+  Exec {
+    path => "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+  }
+
   Class ['odoo::install'] ->
   Class ['odoo::config'] ~>
   Class ['odoo::service']
