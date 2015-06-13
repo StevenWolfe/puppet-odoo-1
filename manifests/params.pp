@@ -22,7 +22,7 @@ class odoo::params {
 
   case $::operatingsystem {
     'Ubuntu': {
-      $dependancy_packages = ['python-dev','python-pip','libxml2-dev','libxslt1-dev','libevent-dev','libsasl2-dev','postgresql-server-dev-all', 'libldap2-dev', 'xfonts-base', 'xfonts-75dpi', 'xfonts-utils', 'libfontenc1', 'libxfont1', 'xfonts-encodings']
+      $dependancy_packages = ['python-dev','python-pip','libxml2-dev','libxslt1-dev','libevent-dev','libsasl2-dev','postgresql-server-dev-all', 'libldap2-dev', 'xfonts-base', 'xfonts-75dpi', 'xfonts-utils', 'libfontenc1', 'libxfont1', 'xfonts-encodings', 'fontconfig', 'libjpeg-turbo8', 'libfontconfig1']
     }
     default: {
       fail("${::operatingsystem} is not supported")
