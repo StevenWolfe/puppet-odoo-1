@@ -5,4 +5,13 @@ db_host = <%= @db_host %>
 db_port = <%= @db_port %>
 db_user = <%= @db_user %>
 db_password = <%= @db_password %>
-addons_path = <%= @addons_path %>
+
+<% if @addons_path %>
+  addons_path = <%= @addons_path %>
+<% end %>
+<% if @logfile %>
+  logfile = <%= @logfile %>
+<% end %>
+<% if @log_level %>
+  log_level = <%= @log_level %>
+<% end %>
