@@ -54,9 +54,9 @@ class odoo (
   $db_port         = $odoo::params::db_port,
   $db_user         = $odoo::params::db_user,
   $db_password     = $odoo::params::db_password,
-  $addons_path     = $odoo::params::addons_path
-  $logfile         = $odoo::params::logfile
-  $log_level       = $odoo::params::log_level
+  $addons_path     = $odoo::params::addons_path,
+  $logfile         = $odoo::params::logfile,
+  $log_level       = $odoo::params::log_level,
 
 ) inherits odoo::params {
 
