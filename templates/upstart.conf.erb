@@ -8,4 +8,4 @@ stop on starting rc RUNLEVEL=[016]
 setuid <%= @odoo_user %>
 setgid <%= @odoo_group %>
 
-exec <%= @install_path %>/odoo.py --addons-path <%= @addons_path %> --config <%= @config_path %>/odoo.conf 
+exec <%= @install_path %>/odoo.py --config <%= @config_path %>/odoo.conf 
