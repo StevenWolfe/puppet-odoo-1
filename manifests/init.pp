@@ -57,6 +57,7 @@ class odoo (
   $addons_path     = $odoo::params::addons_path,
   $logfile         = $odoo::params::logfile,
   $log_level       = $odoo::params::log_level,
+  $data_dir        = $odoo::params::data_dir,
 
 ) inherits odoo::params {
 
