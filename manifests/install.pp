@@ -16,7 +16,7 @@ class odoo::install inherits odoo {
     ensure => installed,
     }
   exec { 'install wkhtmltox': # provides wkhtmltopdf
-    command => "/usr/bin/wget -O /usr/local/src/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb http://downloads.sourceforge.net/wkhtmltopdf/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb; /usr/bin/dpkg -i /usr/local/src/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb",
+    command => "/usr/bin/wget -O /usr/local/src/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb; /usr/bin/dpkg -i /usr/local/src/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb",
     unless  => "/usr/bin/dpkg -l|/bin/grep wkhtmltox",
     require => Package[$odoo::dependancy_packages],
     timeout => 900,
